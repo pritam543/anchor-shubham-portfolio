@@ -1,81 +1,86 @@
-import SlideDown from '../components/SlideDown';
-import { Sparkles, CheckCircle2 } from 'lucide-react';
+import SectionReveal from '../components/SectionReveal';
+import { CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const detailedServices = [
+const servicesList = [
     {
-        title: "Luxury Destination Weddings & Sangeet",
-        subtitle: "Turn celebrations into unforgettable family memories",
+        title: "Destination Weddings & Royal Sangeet",
+        subtitle: "Turning sacred celebrations into unforgettable high-energy memories",
         points: [
-            "Royal bride & groom entry choreography voice-over",
-            "Interactive Sangeet family face-offs & dance battles",
-            "Bespoke couple quiz & impromptu roast sessions",
-            "High energy dance-floor countdown & DJ coordination"
+            "Royal bride & groom entry choreography voice-overs",
+            "Interactive family Sangeet dance battles & roasts",
+            "Bespoke couple game segments & audience banter",
+            "DJ coordination & dance-floor escalation routines"
         ],
-        img: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800&auto=format&fit=crop"
+        img: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=900&auto=format&fit=crop"
     },
     {
         title: "Corporate Summits, Awards & Product Launches",
-        subtitle: "Precision, prestige, and executive presence",
+        subtitle: "Precision protocol, prestige, and seamless executive flow",
         points: [
-            "Strict schedule pacing & seamless stage transitions",
-            "VIP dignitary protocol & award handover ceremonies",
-            "Audience ice-breakers & live polling engagement",
-            "Fireside chats, keynote intros & panel moderation"
+            "Strict agenda timing & seamless keynote introductions",
+            "VIP dignitary handling & award handover protocols",
+            "Audience polling, interactive icebreakers & moderation",
+            "Fireside chats & leadership panel orchestration"
         ],
-        img: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800&auto=format&fit=crop"
+        img: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=900&auto=format&fit=crop"
     },
     {
-        title: "Concerts, College Fests & Sports Leagues",
-        subtitle: "High decibel energy and stadium control",
+        title: "Concerts, Music Festivals & Sports Leagues",
+        subtitle: "Stadium-shaking crowd chants & relentless momentum",
         points: [
             "Celebrity artist opening build-up & hype engine",
             "10,000+ crowd simultaneous chanting & waving",
-            "Sponsor integration & live giveaway segments",
-            "Unscripted improvisational crowd banter"
+            "Live sponsor giveaways & interactive stage challenges",
+            "Fast-paced emergency improvisation without awkwardness"
         ],
-        img: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=800&auto=format&fit=crop"
+        img: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=900&auto=format&fit=crop"
     }
 ];
 
 export default function Services() {
     return (
-        <div className="py-20 max-w-6xl mx-auto px-6">
-            <SlideDown className="text-center mb-16">
-                <p className="text-goldAccent text-xs font-bold uppercase tracking-widest">What I Offer</p>
-                <h1 className="text-4xl md:text-6xl font-black mt-2">Specialized Emcee Services</h1>
-                <p className="text-zinc-400 mt-4 max-w-2xl mx-auto">
-                    Custom stage hosting formats designed specifically for your event category.
+        <div className="py-20 max-w-6xl mx-auto px-6 bg-stageBg">
+            <SectionReveal className="text-center mb-16">
+                <p className="text-goldAccent text-xs font-bold uppercase tracking-[0.25em]">Curation Options</p>
+                <h1 className="text-4xl md:text-6xl font-black mt-2 text-white">Specialized Emcee Formats</h1>
+                <p className="text-stageTextMuted mt-4 max-w-2xl mx-auto text-sm md:text-base">
+                    Every celebration has a distinct rhythm. Choose the stage hosting style tailored to your event.
                 </p>
-            </SlideDown>
+            </SectionReveal>
 
             <div className="space-y-16">
-                {detailedServices.map((s, index) => (
-                    <SlideDown key={index} delay={index * 0.15}>
-                        <div className={`grid md:grid-cols-2 gap-8 items-center bg-stageCard border border-white/10 rounded-3xl p-8 hover:border-goldAccent/40 transition-all ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
+                {servicesList.map((service, index) => (
+                    <SectionReveal key={index} delay={0.1}>
+                        <div className="grid md:grid-cols-2 gap-8 items-center bg-stageCard border border-stageBorder rounded-3xl p-8 hover:border-goldAccent/40 transition-all duration-500 shadow-cardGlow">
                             <div>
-                                <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">{s.title}</h2>
-                                <p className="text-goldAccent text-sm mb-6 font-medium">{s.subtitle}</p>
+                                <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-2">{service.title}</h2>
+                                <p className="text-goldAccent text-sm mb-6 font-medium">{service.subtitle}</p>
                                 <div className="space-y-3 mb-8">
-                                    {s.points.map((p, i) => (
+                                    {service.points.map((pt, i) => (
                                         <div key={i} className="flex items-center gap-3 text-zinc-300 text-sm">
-                                            <CheckCircle2 size={18} className="text-goldAccent shrink-0" />
-                                            <span>{p}</span>
+                                            <CheckCircle2 size={17} className="text-goldAccent shrink-0" />
+                                            <span>{pt}</span>
                                         </div>
                                     ))}
                                 </div>
                                 <Link
                                     to="/contact"
-                                    className="inline-block bg-goldAccent text-stageDark px-6 py-2.5 rounded-full font-bold text-sm hover:bg-goldHover transition-colors"
+                                    className="inline-block bg-gradient-to-r from-goldAccent to-goldLight text-stageBg px-7 py-3 rounded-full font-bold text-xs uppercase tracking-wider hover:scale-105 transition-all duration-300 shadow-goldGlow"
                                 >
-                                    Book This Service
+                                    Book Format
                                 </Link>
                             </div>
-                            <div className="overflow-hidden rounded-2xl border border-white/10 h-[300px]">
-                                <img src={s.img} alt={s.title} className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+
+                            <div className="overflow-hidden rounded-2xl border border-stageBorder h-[320px]">
+                                <img
+                                    src={service.img}
+                                    alt={service.title}
+                                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-1000"
+                                />
                             </div>
                         </div>
-                    </SlideDown>
+                    </SectionReveal>
                 ))}
             </div>
         </div>
