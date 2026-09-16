@@ -7,18 +7,18 @@ export default function SectionReveal({ children, className = "", delay = 0 }) {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
-                transition={{ duration: 0.8, delay: delay + 0.35, ease: [0.25, 1, 0.5, 1] }}
+                transition={{ duration: 0.8, delay: delay + 0.3, ease: [0.25, 1, 0.5, 1] }}
             >
                 {children}
             </motion.div>
 
-            {/* Downward Slide Blind: Burgundy to Dusty Rose blend with Rose Gold border */}
+            {/* Slide Curtain Wipe */}
             <motion.div
                 initial={{ top: "-100%", bottom: "0%" }}
                 whileInView={{ top: ["-100%", "0%", "100%"] }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.9, delay: delay, ease: [0.65, 0, 0.35, 1] }}
-                className="pointer-events-none absolute inset-x-0 h-full z-30 bg-gradient-to-b from-transparent via-dustyRose/25 to-burgundy border-y border-roseGold/60"
+                className="pointer-events-none absolute inset-x-0 h-full z-30 bg-gradient-to-b from-transparent via-roseGold/20 to-nudeBeige border-y border-roseGold/40"
             />
         </div>
     );

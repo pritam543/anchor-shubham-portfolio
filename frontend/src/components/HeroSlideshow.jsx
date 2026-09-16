@@ -14,7 +14,7 @@ const stageImages = [
 
 export default function HeroSlideshow() {
     return (
-        <div className="relative h-[90vh] w-full overflow-hidden bg-deepWine">
+        <div className="relative h-[88vh] w-full overflow-hidden bg-deepWine">
             <Swiper
                 modules={[Autoplay, EffectFade]}
                 effect="fade"
@@ -30,8 +30,8 @@ export default function HeroSlideshow() {
                             className="h-full w-full bg-cover bg-center transition-transform duration-[10000ms] ease-out scale-105"
                             style={{ backgroundImage: `url(${img})` }}
                         >
-                            {/* Deep Wine to Burgundy Vignette Layer */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-deepWine via-deepWine/80 to-burgundy/50" />
+                            {/* Deep Wine Overlay */}
+                            <div className="absolute inset-0 bg-deepWine/75" />
                         </div>
                     </SwiperSlide>
                 ))}
@@ -39,34 +39,32 @@ export default function HeroSlideshow() {
 
             <div className="absolute inset-0 z-20 flex items-center justify-center text-center px-6">
                 <SectionReveal className="max-w-4xl">
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-burgundy/80 border border-dustyRose/50 backdrop-blur-md mb-6 shadow-roseGlow">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-burgundy/80 border border-roseGold/40 backdrop-blur-md mb-6 shadow-roseGlow">
                         <span className="w-2 h-2 rounded-full bg-roseGold animate-ping" />
                         <p className="text-cream tracking-[0.2em] font-semibold uppercase text-xs">
-                            Celebrity Emcee • Corporate Host • Destination Wedding Specialist
+                            Celebrity Emcee • Corporate Host • Wedding Specialist
                         </p>
                     </div>
 
-                    <h1 className="text-4xl md:text-7xl font-black tracking-tight text-cream mb-6 leading-[1.1]">
+                    <h1 className="text-4xl md:text-7xl font-black tracking-tight text-cream mb-6 leading-[1.15]">
                         Electrifying Stages. <br />
-                        <span className="bg-gradient-to-r from-cream via-dustyRose to-roseGold bg-clip-text text-transparent">
-                            Commanding The Room.
-                        </span>
+                        <span className="text-roseGold">Commanding The Room.</span>
                     </h1>
 
-                    <p className="text-nudeBeige text-base md:text-lg mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                    <p className="text-nudeBeige text-base md:text-lg mb-10 max-w-2xl mx-auto font-normal leading-relaxed">
                         Spontaneous wit, refined charm, and magnetic energy delivering unforgettable experiences for premier weddings and corporate summits.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                         <Link
                             to="/contact"
-                            className="w-full sm:w-auto px-9 py-4 rounded-full font-bold text-xs tracking-wider uppercase bg-gradient-to-r from-roseGold via-dustyRose to-roseGold text-deepWine hover:scale-105 hover:shadow-roseGlow transition-all duration-500"
+                            className="w-full sm:w-auto px-9 py-4 rounded-full font-bold text-xs tracking-wider uppercase bg-roseGold text-deepWine hover:bg-burgundy hover:text-cream shadow-roseGlow transition-all duration-300"
                         >
                             Check Availability
                         </Link>
                         <Link
                             to="/gallery"
-                            className="w-full sm:w-auto px-9 py-4 rounded-full font-bold text-xs tracking-wider uppercase border border-dustyRose/50 bg-burgundy/40 backdrop-blur-md text-cream hover:border-roseGold hover:text-roseGold transition-all duration-500"
+                            className="w-full sm:w-auto px-9 py-4 rounded-full font-bold text-xs tracking-wider uppercase border border-nudeBeige/60 bg-deepWine/40 backdrop-blur-md text-cream hover:border-roseGold hover:text-roseGold transition-all duration-300"
                         >
                             Watch Showreels
                         </Link>

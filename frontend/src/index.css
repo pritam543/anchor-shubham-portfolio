@@ -8,10 +8,10 @@
   }
 
   body {
-    background-color: #260812;
-    /* Deep Wine */
-    color: #FFF5EA;
-    /* Cream */
+    background-color: #FFF5EA;
+    /* 60% Cream Base */
+    color: #260812;
+    /* Deep Wine Text */
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     overflow-x: hidden;
   }
