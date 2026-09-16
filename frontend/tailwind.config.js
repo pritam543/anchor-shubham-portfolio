@@ -7,16 +7,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        stageBg: '#050811',      // Royal Midnight Stage Black
-        stageCard: '#0c1322',    // Deep Stage Navy
-        stageBorder: '#1c2842',  // Soft Slate Border
-        goldAccent: '#dfb15b',   // Liquid Stage Gold
-        goldLight: '#ffd57a',    // Glow Gold Hover
-        stageTextMuted: '#9aa5be',
+        deepWine: '#260812',       // Darkest Luxury Background
+        burgundy: '#4A1022',       // Rich Royal Sections & Cards
+        roseGold: '#C98F8F',       // Primary Metallic Accent / Buttons
+        dustyRose: '#D9A6A8',      // Soft Borders & Highlights
+        cream: '#FFF5EA',          // Primary Crisp Text
+        nudeBeige: '#E8D5C4',      // Secondary Body Text & Subtitles
       },
       boxShadow: {
-        'goldGlow': '0 0 25px rgba(223, 177, 91, 0.25)',
-        'cardGlow': '0 10px 30px -10px rgba(0,0,0,0.6)',
+        'roseGlow': '0 0 25px rgba(201, 143, 143, 0.3)',
+        'wineGlow': '0 10px 30px -10px rgba(38, 8, 18, 0.8)',
       }
     },
   },

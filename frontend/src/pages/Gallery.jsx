@@ -11,28 +11,28 @@ const galleryPhotos = [
 
 export default function Gallery() {
     return (
-        <div className="py-20 max-w-6xl mx-auto px-6 bg-stageBg">
+        <div className="py-20 max-w-6xl mx-auto px-6 bg-deepWine">
             <SectionReveal className="text-center mb-16">
-                <p className="text-goldAccent text-xs font-bold uppercase tracking-[0.25em]">Stage In Action</p>
-                <h1 className="text-4xl md:text-6xl font-black mt-2 text-white">Moments & Showreels</h1>
-                <p className="text-stageTextMuted mt-4 max-w-2xl mx-auto text-sm md:text-base">
-                    A glimpse into the energy, lights, audience cheers, and stage highlights across India.
+                <p className="text-roseGold text-xs font-bold uppercase tracking-[0.25em]">Stage In Action</p>
+                <h1 className="text-4xl md:text-6xl font-black mt-2 text-cream">Moments & Showreels</h1>
+                <p className="text-nudeBeige mt-4 max-w-2xl mx-auto text-sm md:text-base">
+                    A glimpse into the energy, crowd cheers, and stage highlights across India.
                 </p>
             </SectionReveal>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {galleryPhotos.map((photo, i) => (
                     <SectionReveal key={i} delay={i * 0.1}>
-                        <div className="relative group overflow-hidden rounded-3xl border border-stageBorder h-80 shadow-cardGlow">
+                        <div className="relative group overflow-hidden rounded-3xl border border-dustyRose/30 h-80 shadow-wineGlow">
                             <img
                                 src={photo.url}
                                 alt={photo.title}
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-stageBg via-stageBg/30 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-300" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-deepWine via-deepWine/40 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-300" />
                             <div className="absolute bottom-5 left-5">
-                                <span className="text-[11px] uppercase text-goldAccent font-bold tracking-widest">Live Stage</span>
-                                <h3 className="text-white font-bold text-lg">{photo.title}</h3>
+                                <span className="text-[11px] uppercase text-roseGold font-bold tracking-widest">Live Stage</span>
+                                <h3 className="text-cream font-bold text-lg">{photo.title}</h3>
                             </div>
                         </div>
                     </SectionReveal>
