@@ -52,7 +52,7 @@ export default function Services() {
             <div className="space-y-16">
                 {servicesList.map((service, index) => (
                     <SectionReveal key={index} delay={0.1}>
-                        <div className="grid md:grid-cols-2 gap-8 items-center bg-burgundy/50 border border-dustyRose/30 rounded-3xl p-8 hover:border-roseGold transition-all duration-500 shadow-wineGlow">
+                        <div className="grid md:grid-cols-2 gap-8 items-center bg-burgundy/60 border border-dustyRose/30 rounded-3xl p-8 hover:border-roseGold transition-all duration-500 shadow-wineShadow">
                             <div>
                                 <h2 className="text-2xl md:text-3xl font-extrabold text-cream mb-2">{service.title}</h2>
                                 <p className="text-roseGold text-sm mb-6 font-medium">{service.subtitle}</p>
@@ -66,7 +66,7 @@ export default function Services() {
                                 </div>
                                 <Link
                                     to="/contact"
-                                    className="inline-block bg-gradient-to-r from-roseGold to-dustyRose text-deepWine px-7 py-3 rounded-full font-bold text-xs uppercase tracking-wider hover:scale-105 transition-all duration-300 shadow-roseGlow"
+                                    className="inline-block bg-gradient-to-r from-roseGold via-dustyRose to-roseGold text-deepWine px-7 py-3 rounded-full font-bold text-xs uppercase tracking-wider hover:scale-105 transition-all duration-300 shadow-roseGlow"
                                 >
                                     Book Format
                                 </Link>

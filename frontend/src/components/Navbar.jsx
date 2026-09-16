@@ -12,20 +12,20 @@ export default function Navbar() {
     ];
 
     return (
-        <header className="sticky top-0 z-50 backdrop-blur-xl bg-deepWine/90 border-b border-burgundy/60 transition-colors duration-500">
+        <header className="sticky top-0 z-50 backdrop-blur-xl bg-deepWine/90 border-b border-dustyRose/25 transition-colors duration-500">
             <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 
                 {/* Brand Logo */}
                 <Link to="/" className="group flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-burgundy border border-roseGold/40 flex items-center justify-center group-hover:border-roseGold transition-all duration-500 shadow-roseGlow">
+                    <div className="w-10 h-10 rounded-full bg-burgundy border border-dustyRose/50 flex items-center justify-center group-hover:border-roseGold transition-all duration-500 shadow-roseGlow">
                         <Mic2 className="w-5 h-5 text-roseGold group-hover:scale-110 transition-transform duration-300" />
                     </div>
                     <span className="text-xl font-extrabold tracking-wider text-cream group-hover:text-roseGold transition-colors duration-300">
-                        SHUBHAM <span className="font-light text-roseGold">ATRE</span>
+                        SHUBHAM <span className="font-light text-dustyRose">ATRE</span>
                     </span>
                 </Link>
 
-                {/* Multi-Nav Links with Smooth Pill Hover */}
+                {/* Navigation Links */}
                 <nav className="hidden md:flex items-center gap-2">
                     {navLinks.map((item) => {
                         const isActive = location.pathname === item.path;
@@ -33,9 +33,9 @@ export default function Navbar() {
                             <Link
                                 key={item.name}
                                 to={item.path}
-                                className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-500 ease-out hover:text-cream ${isActive
-                                    ? 'text-cream bg-burgundy border border-roseGold/40 shadow-sm'
-                                    : 'text-nudeBeige hover:bg-burgundy/40'
+                                className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-500 ease-out ${isActive
+                                    ? 'text-cream bg-burgundy border border-dustyRose/60 shadow-sm'
+                                    : 'text-nudeBeige hover:text-cream hover:bg-burgundy/40'
                                     }`}
                             >
                                 {item.name}
@@ -44,12 +44,12 @@ export default function Navbar() {
                     })}
                 </nav>
 
-                {/* Call-to-action Button */}
+                {/* Action Button */}
                 <Link
                     to="/contact"
-                    className="relative inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-deepWine bg-gradient-to-r from-roseGold via-dustyRose to-roseGold hover:scale-105 shadow-roseGlow hover:shadow-lg transition-all duration-500"
+                    className="relative inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-deepWine bg-gradient-to-r from-roseGold via-dustyRose to-roseGold hover:scale-105 shadow-roseGlow transition-all duration-500"
                 >
-                    <PhoneCall size={14} className="animate-bounce" />
+                    <PhoneCall size={14} className="animate-bounce text-deepWine" />
                     <span>Book Anchor</span>
                 </Link>
             </div>

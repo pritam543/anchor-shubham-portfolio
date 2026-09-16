@@ -41,19 +41,19 @@ export default function Contact() {
 
             <div className="grid md:grid-cols-3 gap-10">
                 <SectionReveal delay={0.1} className="space-y-6">
-                    <div className="bg-burgundy/50 border border-dustyRose/30 p-6 rounded-3xl shadow-wineGlow">
+                    <div className="bg-burgundy/60 border border-dustyRose/30 p-6 rounded-3xl shadow-wineShadow">
                         <Phone className="text-roseGold mb-3" size={24} />
                         <h3 className="text-lg font-bold text-cream">WhatsApp & Direct</h3>
                         <p className="text-nudeBeige text-sm mt-1">+91 98765 43210</p>
                     </div>
 
-                    <div className="bg-burgundy/50 border border-dustyRose/30 p-6 rounded-3xl shadow-wineGlow">
+                    <div className="bg-burgundy/60 border border-dustyRose/30 p-6 rounded-3xl shadow-wineShadow">
                         <Mail className="text-roseGold mb-3" size={24} />
                         <h3 className="text-lg font-bold text-cream">Official Mail</h3>
                         <p className="text-nudeBeige text-sm mt-1">bookings@anchorshubhamatre.com</p>
                     </div>
 
-                    <div className="bg-burgundy/50 border border-dustyRose/30 p-6 rounded-3xl shadow-wineGlow">
+                    <div className="bg-burgundy/60 border border-dustyRose/30 p-6 rounded-3xl shadow-wineShadow">
                         <MapPin className="text-roseGold mb-3" size={24} />
                         <h3 className="text-lg font-bold text-cream">Headquarters</h3>
                         <p className="text-nudeBeige text-sm mt-1">Indore & Mumbai (Pan-India Travel)</p>
@@ -61,7 +61,7 @@ export default function Contact() {
                 </SectionReveal>
 
                 <SectionReveal delay={0.2} className="md:col-span-2">
-                    <form onSubmit={handleSubmit} className="bg-burgundy/50 border border-dustyRose/30 p-8 rounded-3xl space-y-6 shadow-wineGlow">
+                    <form onSubmit={handleSubmit} className="bg-burgundy/60 border border-dustyRose/30 p-8 rounded-3xl space-y-6 shadow-wineShadow">
                         <div className="grid md:grid-cols-2 gap-6">
                             <div>
                                 <label className="block text-xs uppercase tracking-wider text-roseGold mb-2 font-bold">Your Name *</label>
@@ -71,7 +71,7 @@ export default function Contact() {
                                     placeholder="e.g. Aman Verma"
                                     value={formData.name}
                                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                    className="w-full bg-deepWine border border-dustyRose/40 rounded-xl px-4 py-3.5 text-cream focus:border-roseGold outline-none transition-colors duration-300"
+                                    className="w-full bg-deepWine border border-dustyRose/40 rounded-xl px-4 py-3.5 text-cream placeholder-nudeBeige/50 focus:border-roseGold outline-none transition-colors duration-300"
                                 />
                             </div>
                             <div>
@@ -82,7 +82,7 @@ export default function Contact() {
                                     placeholder="e.g. +91 98260 00000"
                                     value={formData.phone}
                                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                                    className="w-full bg-deepWine border border-dustyRose/40 rounded-xl px-4 py-3.5 text-cream focus:border-roseGold outline-none transition-colors duration-300"
+                                    className="w-full bg-deepWine border border-dustyRose/40 rounded-xl px-4 py-3.5 text-cream placeholder-nudeBeige/50 focus:border-roseGold outline-none transition-colors duration-300"
                                 />
                             </div>
                         </div>
@@ -96,7 +96,7 @@ export default function Contact() {
                                     placeholder="aman@example.com"
                                     value={formData.email}
                                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                    className="w-full bg-deepWine border border-dustyRose/40 rounded-xl px-4 py-3.5 text-cream focus:border-roseGold outline-none transition-colors duration-300"
+                                    className="w-full bg-deepWine border border-dustyRose/40 rounded-xl px-4 py-3.5 text-cream placeholder-nudeBeige/50 focus:border-roseGold outline-none transition-colors duration-300"
                                 />
                             </div>
                             <div>
@@ -107,7 +107,7 @@ export default function Contact() {
                                     placeholder="e.g. Indore, Udaipur, Goa"
                                     value={formData.city}
                                     onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                                    className="w-full bg-deepWine border border-dustyRose/40 rounded-xl px-4 py-3.5 text-cream focus:border-roseGold outline-none transition-colors duration-300"
+                                    className="w-full bg-deepWine border border-dustyRose/40 rounded-xl px-4 py-3.5 text-cream placeholder-nudeBeige/50 focus:border-roseGold outline-none transition-colors duration-300"
                                 />
                             </div>
                         </div>
@@ -145,13 +145,13 @@ export default function Contact() {
                                 placeholder="Expected crowd size, venue notes, or specific requirements..."
                                 value={formData.notes}
                                 onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                                className="w-full bg-deepWine border border-dustyRose/40 rounded-xl px-4 py-3.5 text-cream focus:border-roseGold outline-none transition-colors duration-300"
+                                className="w-full bg-deepWine border border-dustyRose/40 rounded-xl px-4 py-3.5 text-cream placeholder-nudeBeige/50 focus:border-roseGold outline-none transition-colors duration-300"
                             ></textarea>
                         </div>
 
                         <button
                             type="submit"
-                            className="w-full bg-gradient-to-r from-roseGold to-dustyRose text-deepWine font-extrabold py-4 rounded-xl shadow-roseGlow hover:scale-[1.01] transition-all duration-300 flex items-center justify-center gap-2 text-xs uppercase tracking-widest"
+                            className="w-full bg-gradient-to-r from-roseGold via-dustyRose to-roseGold text-deepWine font-extrabold py-4 rounded-xl shadow-roseGlow hover:scale-[1.01] transition-all duration-300 flex items-center justify-center gap-2 text-xs uppercase tracking-widest"
                         >
                             <Send size={16} /> Request Date Availability
                         </button>

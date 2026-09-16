@@ -58,8 +58,8 @@ export default function Home() {
             <HeroSlideshow />
 
             {/* Brand Ticker */}
-            <section className="py-7 bg-burgundy/40 border-y border-dustyRose/20">
-                <div className="max-w-7xl mx-auto px-6 flex flex-wrap items-center justify-center gap-8 md:gap-14 opacity-85">
+            <section className="py-7 bg-burgundy/60 border-y border-dustyRose/20">
+                <div className="max-w-7xl mx-auto px-6 flex flex-wrap items-center justify-center gap-8 md:gap-14">
                     <span className="text-xs uppercase tracking-[0.25em] text-roseGold font-bold">Trusted By Brands:</span>
                     {brands.map((b, i) => (
                         <span key={i} className="text-nudeBeige font-medium text-sm hover:text-cream transition-colors duration-300">
@@ -76,7 +76,7 @@ export default function Home() {
                         {stats.map((stat, i) => {
                             const Icon = stat.icon;
                             return (
-                                <div key={i} className="p-8 rounded-2xl bg-burgundy/50 border border-dustyRose/30 text-center hover:border-roseGold transition-all duration-500 shadow-wineGlow">
+                                <div key={i} className="p-8 rounded-2xl bg-burgundy/70 border border-dustyRose/30 text-center hover:border-roseGold transition-all duration-500 shadow-wineShadow">
                                     <Icon className="w-8 h-8 mx-auto text-roseGold mb-3" />
                                     <h3 className="text-3xl md:text-4xl font-extrabold text-cream">{stat.number}</h3>
                                     <p className="text-nudeBeige text-xs uppercase tracking-wider mt-2">{stat.label}</p>
@@ -99,9 +99,9 @@ export default function Home() {
                 <div className="grid md:grid-cols-3 gap-8">
                     {services.map((item, index) => (
                         <SectionReveal key={index} delay={index * 0.15}>
-                            <div className="bg-burgundy/60 border border-dustyRose/30 rounded-3xl p-8 hover:border-roseGold hover:-translate-y-2 transition-all duration-500 shadow-wineGlow flex flex-col justify-between h-full group">
+                            <div className="bg-burgundy/70 border border-dustyRose/30 rounded-3xl p-8 hover:border-roseGold hover:-translate-y-2 transition-all duration-500 shadow-wineShadow flex flex-col justify-between h-full group">
                                 <div>
-                                    <span className="text-[11px] font-bold tracking-wider uppercase px-3 py-1 bg-deepWine text-roseGold rounded-full border border-dustyRose/40">
+                                    <span className="text-[11px] font-bold tracking-wider uppercase px-3.5 py-1 bg-deepWine text-dustyRose rounded-full border border-dustyRose/40">
                                         {item.tag}
                                     </span>
                                     <h3 className="text-2xl font-bold text-cream group-hover:text-roseGold transition-colors duration-300 mt-5 mb-3">
@@ -120,14 +120,14 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Spotlight Section */}
-            <section className="py-24 bg-burgundy/30 border-y border-dustyRose/20">
+            {/* Stage Edge Spotlight Section */}
+            <section className="py-24 bg-burgundy/40 border-y border-dustyRose/20">
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
                     <SectionReveal>
                         <span className="text-roseGold text-xs font-bold uppercase tracking-[0.2em]">The Stage Edge</span>
                         <h2 className="text-3xl md:text-5xl font-black mt-2 mb-6 text-cream leading-tight">
                             More Than An Emcee. <br />
-                            <span className="bg-gradient-to-r from-cream via-roseGold to-dustyRose bg-clip-text text-transparent">
+                            <span className="bg-gradient-to-r from-cream via-dustyRose to-roseGold bg-clip-text text-transparent">
                                 An Experience Curator.
                             </span>
                         </h2>
@@ -167,7 +167,7 @@ export default function Home() {
                 <div className="grid md:grid-cols-2 gap-8">
                     {testimonials.map((t, i) => (
                         <SectionReveal key={i} delay={i * 0.15}>
-                            <div className="bg-burgundy/50 border border-dustyRose/30 p-8 rounded-3xl relative shadow-wineGlow hover:border-roseGold transition-all duration-500">
+                            <div className="bg-burgundy/60 border border-dustyRose/30 p-8 rounded-3xl relative shadow-wineShadow hover:border-roseGold transition-all duration-500">
                                 <Quote className="w-12 h-12 text-roseGold/20 absolute top-6 right-6" />
                                 <div className="flex gap-1 text-roseGold mb-4">
                                     {[...Array(5)].map((_, idx) => (
@@ -179,7 +179,7 @@ export default function Home() {
                                 </p>
                                 <div>
                                     <h4 className="font-bold text-cream">{t.name}</h4>
-                                    <p className="text-roseGold text-xs tracking-wider">{t.event}</p>
+                                    <p className="text-dustyRose text-xs tracking-wider">{t.event}</p>
                                 </div>
                             </div>
                         </SectionReveal>
@@ -187,7 +187,7 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* CTA Banner */}
+            {/* Call To Action Banner */}
             <section className="py-20 bg-gradient-to-r from-deepWine via-burgundy to-deepWine border-t border-dustyRose/30 text-center">
                 <SectionReveal className="max-w-3xl mx-auto px-6">
                     <h3 className="text-3xl md:text-5xl font-black mb-4 text-cream">Let's Electrify Your Stage</h3>
@@ -196,7 +196,7 @@ export default function Home() {
                     </p>
                     <Link
                         to="/contact"
-                        className="inline-block bg-gradient-to-r from-roseGold to-dustyRose text-deepWine px-10 py-4 rounded-full font-bold text-xs uppercase tracking-widest shadow-roseGlow hover:scale-105 transition-all duration-500"
+                        className="inline-block bg-gradient-to-r from-roseGold via-dustyRose to-roseGold text-deepWine px-10 py-4 rounded-full font-bold text-xs uppercase tracking-widest shadow-roseGlow hover:scale-105 transition-all duration-500"
                     >
                         Lock Your Event Date
                     </Link>

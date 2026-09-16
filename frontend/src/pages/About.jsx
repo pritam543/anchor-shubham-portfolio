@@ -14,7 +14,7 @@ export default function About() {
 
             <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
                 <SectionReveal>
-                    <div className="relative rounded-3xl overflow-hidden border border-dustyRose/40 shadow-wineGlow">
+                    <div className="relative rounded-3xl overflow-hidden border border-dustyRose/40 shadow-wineShadow">
                         <img
                             src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?q=80&w=1000&auto=format&fit=crop"
                             alt="Shubham Atre Portrait"

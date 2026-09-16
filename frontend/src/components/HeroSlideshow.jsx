@@ -20,10 +20,7 @@ export default function HeroSlideshow() {
                 effect="fade"
                 speed={2500}
                 fadeEffect={{ crossFade: true }}
-                autoplay={{
-                    delay: 4500,
-                    disableOnInteraction: false,
-                }}
+                autoplay={{ delay: 4500, disableOnInteraction: false }}
                 loop={true}
                 className="h-full w-full"
             >
@@ -33,17 +30,16 @@ export default function HeroSlideshow() {
                             className="h-full w-full bg-cover bg-center transition-transform duration-[10000ms] ease-out scale-105"
                             style={{ backgroundImage: `url(${img})` }}
                         >
-                            {/* Deep Wine to Burgundy Vignette Overlays */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-deepWine via-deepWine/75 to-burgundy/40" />
+                            {/* Deep Wine to Burgundy Vignette Layer */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-deepWine via-deepWine/80 to-burgundy/50" />
                         </div>
                     </SwiperSlide>
                 ))}
             </Swiper>
 
-            {/* Floating Center Content */}
             <div className="absolute inset-0 z-20 flex items-center justify-center text-center px-6">
                 <SectionReveal className="max-w-4xl">
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-burgundy/70 border border-dustyRose/40 backdrop-blur-md mb-6 shadow-roseGlow">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-burgundy/80 border border-dustyRose/50 backdrop-blur-md mb-6 shadow-roseGlow">
                         <span className="w-2 h-2 rounded-full bg-roseGold animate-ping" />
                         <p className="text-cream tracking-[0.2em] font-semibold uppercase text-xs">
                             Celebrity Emcee • Corporate Host • Destination Wedding Specialist
@@ -52,7 +48,7 @@ export default function HeroSlideshow() {
 
                     <h1 className="text-4xl md:text-7xl font-black tracking-tight text-cream mb-6 leading-[1.1]">
                         Electrifying Stages. <br />
-                        <span className="bg-gradient-to-r from-cream via-roseGold to-dustyRose bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-cream via-dustyRose to-roseGold bg-clip-text text-transparent">
                             Commanding The Room.
                         </span>
                     </h1>
@@ -64,13 +60,13 @@ export default function HeroSlideshow() {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                         <Link
                             to="/contact"
-                            className="w-full sm:w-auto px-9 py-4 rounded-full font-bold text-xs tracking-wider uppercase bg-gradient-to-r from-roseGold to-dustyRose text-deepWine hover:scale-105 hover:shadow-roseGlow transition-all duration-500"
+                            className="w-full sm:w-auto px-9 py-4 rounded-full font-bold text-xs tracking-wider uppercase bg-gradient-to-r from-roseGold via-dustyRose to-roseGold text-deepWine hover:scale-105 hover:shadow-roseGlow transition-all duration-500"
                         >
                             Check Availability
                         </Link>
                         <Link
                             to="/gallery"
-                            className="w-full sm:w-auto px-9 py-4 rounded-full font-bold text-xs tracking-wider uppercase border border-dustyRose/50 bg-burgundy/30 backdrop-blur-md text-cream hover:border-roseGold hover:text-roseGold transition-all duration-500"
+                            className="w-full sm:w-auto px-9 py-4 rounded-full font-bold text-xs tracking-wider uppercase border border-dustyRose/50 bg-burgundy/40 backdrop-blur-md text-cream hover:border-roseGold hover:text-roseGold transition-all duration-500"
                         >
                             Watch Showreels
                         </Link>
