@@ -2,11 +2,11 @@ import SectionReveal from '../components/SectionReveal';
 
 const galleryPhotos = [
     { url: "/hero-stage.jpg", title: "Live Sangeet Euphoria" },
-    { url: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=800&auto=format&fit=crop", title: "Corporate Gala Night" },
-    { url: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=800&auto=format&fit=crop", title: "Royal Wedding Entry" },
-    { url: "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800&auto=format&fit=crop", title: "Keynote Moderation" },
-    { url: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=800&auto=format&fit=crop", title: "National Award Gala" },
-    { url: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=800&auto=format&fit=crop", title: "Youth Arena Fest" },
+    { url: "frontend/public/images/download (1).jpeg", title: "Corporate Gala Night" },
+    { url: "frontend/public/images/download (4).jpeg", title: "Royal Wedding Entry" },
+    { url: "frontend/public/images/download (5).jpeg", title: "Keynote Moderation" },
+    { url: "frontend/public/images/download (6).jpeg", title: "National Award Gala" },
+    ,
 ];
 
 export default function Gallery() {
