@@ -2,24 +2,14 @@ import { motion } from 'framer-motion';
 
 export default function SectionReveal({ children, className = "", delay = 0 }) {
     return (
-        <div className={`relative overflow-hidden ${className}`}>
-            <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
-                transition={{ duration: 0.8, delay: delay + 0.3, ease: [0.25, 1, 0.5, 1] }}
-            >
-                {children}
-            </motion.div>
-
-            {/* Slide Curtain Wipe */}
-            <motion.div
-                initial={{ top: "-100%", bottom: "0%" }}
-                whileInView={{ top: ["-100%", "0%", "100%"] }}
-                viewport={{ once: true, amount: 0.15 }}
-                transition={{ duration: 0.9, delay: delay, ease: [0.65, 0, 0.35, 1] }}
-                className="pointer-events-none absolute inset-x-0 h-full z-30 bg-gradient-to-b from-transparent via-roseGold/20 to-nudeBeige border-y border-roseGold/40"
-            />
-        </div>
+        <motion.div
+            initial={{ opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
+            className={className}
+        >
+            {children}
+        </motion.div>
     );
 }

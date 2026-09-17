@@ -1,31 +1,31 @@
 import SectionReveal from '../components/SectionReveal';
-import { Trophy, Globe, Sparkles } from 'lucide-react';
+import { Trophy, Globe } from 'lucide-react';
 
 export default function About() {
     return (
-        <div className="py-20 bg-cream text-deepWine">
+        <div className="py-20 bg-pearl text-espresso min-h-screen">
             <div className="max-w-6xl mx-auto px-6">
                 <SectionReveal className="text-center mb-16">
-                    <p className="text-roseGold text-xs font-bold uppercase tracking-[0.25em]">Behind The Microphone</p>
-                    <h1 className="text-4xl md:text-6xl font-black mt-2 text-burgundy">The Voice & Energy</h1>
-                    <p className="text-deepWine/70 mt-4 max-w-2xl mx-auto text-sm md:text-base">
+                    <p className="text-champagneDark text-xs font-bold uppercase tracking-[0.25em]">Behind The Microphone</p>
+                    <h1 className="text-4xl md:text-6xl font-black mt-2 text-espresso">The Voice & Energy</h1>
+                    <p className="text-warmMuted mt-4 max-w-2xl mx-auto text-sm md:text-base">
                         From high-stakes boardrooms to electrifying destination wedding stages across India.
                     </p>
                 </SectionReveal>
 
                 <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
                     <SectionReveal>
-                        <div className="relative rounded-3xl overflow-hidden border border-nudeBeige shadow-luxuryCard">
+                        <div className="relative rounded-3xl overflow-hidden border border-champagne/20 shadow-luxuryCard">
                             <img
-                                src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?q=80&w=1000&auto=format&fit=crop"
+                                src="/hero-stage.jpg"
                                 alt="Shubham Atre Portrait"
                                 className="w-full h-[480px] object-cover hover:scale-105 transition-transform duration-700"
                             />
                         </div>
                     </SectionReveal>
 
-                    <SectionReveal delay={0.2} className="space-y-6 text-deepWine/80 text-sm md:text-base leading-relaxed">
-                        <h2 className="text-2xl md:text-3xl font-extrabold text-burgundy">
+                    <SectionReveal delay={0.15} className="space-y-6 text-warmMuted text-sm md:text-base leading-relaxed">
+                        <h2 className="text-2xl md:text-3xl font-extrabold text-espresso">
                             "An event is not remembered by the schedule. It is remembered by how the room felt."
                         </h2>
                         <p>
@@ -34,13 +34,13 @@ export default function About() {
                         <p>
                             His signature methodology combines sharp, unscripted wit, sophisticated presence, and high-energy interactive crowd coordination.
                         </p>
-                        <div className="grid grid-cols-2 gap-4 pt-6 border-t border-nudeBeige text-burgundy font-semibold">
+                        <div className="grid grid-cols-2 gap-4 pt-6 border-t border-champagne/20 text-espresso font-semibold">
                             <div className="flex items-center gap-3">
-                                <Trophy className="text-roseGold" size={20} />
+                                <Trophy className="text-champagneDark" size={20} />
                                 <span className="text-sm">500+ Stages Hosted</span>
                             </div>
                             <div className="flex items-center gap-3">
-                                <Globe className="text-roseGold" size={20} />
+                                <Globe className="text-champagneDark" size={20} />
                                 <span className="text-sm">Pan-India Availability</span>
                             </div>
                         </div>

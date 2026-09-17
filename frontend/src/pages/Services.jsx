@@ -12,7 +12,7 @@ const servicesList = [
             "Bespoke couple game segments & audience banter",
             "DJ coordination & dance-floor escalation routines"
         ],
-        img: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=900&auto=format&fit=crop"
+        img: "/hero-stage.jpg"
     },
     {
         title: "Haldi, Mehendi & Phere Rituals",
@@ -40,12 +40,12 @@ const servicesList = [
 
 export default function Services() {
     return (
-        <div className="py-20 bg-nudeBeige text-deepWine">
+        <div className="py-20 bg-pearl text-espresso min-h-screen">
             <div className="max-w-6xl mx-auto px-6">
                 <SectionReveal className="text-center mb-16">
-                    <p className="text-roseGold text-xs font-bold uppercase tracking-[0.25em]">Curation Options</p>
-                    <h1 className="text-4xl md:text-6xl font-black mt-2 text-burgundy">Specialized Stage Formats</h1>
-                    <p className="text-deepWine/70 mt-4 max-w-2xl mx-auto text-sm md:text-base">
+                    <p className="text-champagneDark text-xs font-bold uppercase tracking-[0.25em]">Curation Options</p>
+                    <h1 className="text-4xl md:text-6xl font-black mt-2 text-espresso">Specialized Stage Formats</h1>
+                    <p className="text-warmMuted mt-4 max-w-2xl mx-auto text-sm md:text-base">
                         Every celebration has a distinct rhythm. Choose the stage hosting style tailored to your event.
                     </p>
                 </SectionReveal>
@@ -53,27 +53,27 @@ export default function Services() {
                 <div className="space-y-16">
                     {servicesList.map((service, index) => (
                         <SectionReveal key={index} delay={0.1}>
-                            <div className="grid md:grid-cols-2 gap-8 items-center bg-cream border border-nudeBeige rounded-3xl p-8 hover:border-roseGold transition-all duration-300 shadow-luxuryCard">
+                            <div className="grid md:grid-cols-2 gap-8 items-center bg-white border border-champagne/20 rounded-3xl p-8 hover:border-champagneDark transition-all duration-300 shadow-luxuryCard">
                                 <div>
-                                    <h2 className="text-2xl md:text-3xl font-extrabold text-burgundy mb-2">{service.title}</h2>
-                                    <p className="text-roseGold text-sm mb-6 font-bold">{service.subtitle}</p>
+                                    <h2 className="text-2xl md:text-3xl font-extrabold text-espresso mb-2">{service.title}</h2>
+                                    <p className="text-champagneDark text-sm mb-6 font-bold">{service.subtitle}</p>
                                     <div className="space-y-3 mb-8">
                                         {service.points.map((pt, i) => (
-                                            <div key={i} className="flex items-center gap-3 text-deepWine text-sm font-medium">
-                                                <CheckCircle2 size={17} className="text-roseGold shrink-0" />
+                                            <div key={i} className="flex items-center gap-3 text-warmMuted text-sm font-medium">
+                                                <CheckCircle2 size={17} className="text-champagneDark shrink-0" />
                                                 <span>{pt}</span>
                                             </div>
                                         ))}
                                     </div>
                                     <Link
                                         to="/contact"
-                                        className="inline-block bg-roseGold text-deepWine hover:bg-burgundy hover:text-cream px-7 py-3 rounded-full font-bold text-xs uppercase tracking-wider transition-all duration-300 shadow-roseGlow"
+                                        className="inline-block bg-espresso text-white hover:bg-champagneDark hover:text-espresso px-7 py-3 rounded-full font-bold text-xs uppercase tracking-wider transition-all duration-300 shadow-softGlow"
                                     >
                                         Book Format
                                     </Link>
                                 </div>
 
-                                <div className="overflow-hidden rounded-2xl border border-nudeBeige h-[320px]">
+                                <div className="overflow-hidden rounded-2xl border border-champagne/20 h-[320px]">
                                     <img
                                         src={service.img}
                                         alt={service.title}

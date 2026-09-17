@@ -9,7 +9,7 @@ import Contact from './pages/Contact.jsx';
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-cream text-deepWine flex flex-col justify-between">
+      <div className="min-h-screen bg-pearl text-espresso flex flex-col justify-between">
         <Navbar />
         <main className="flex-grow">
           <Routes>
@@ -20,7 +20,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
-        <footer className="py-8 text-center text-nudeBeige border-t border-nudeBeige/20 text-sm bg-deepWine">
+        <footer className="py-8 text-center text-warmMuted border-t border-champagne/20 text-sm bg-white">
           © {new Date().getFullYear()} Anchor Shubham Atre. All rights reserved.
         </footer>
       </div>
